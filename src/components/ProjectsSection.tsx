@@ -24,7 +24,7 @@ export const ProjectsSection = () => {
       description: "An AI-powered GitHub SaaS application built with Next.js, Tailwind CSS, and integrated with Gemini AI, Prisma for database management, for machine learning and Assembly AI for speech-to-text. It leverages Clerk for user authentication, Stripe for payments, and real-time features to enhance code management, collaboration, and developer productivity.",
       technologies: ["Next.js", "Tailwind CSS", "Gemini AI", "Prisma", "Assembly AI", "Clerk", "Stripe"],
       links: {
-        github: "https://github.com/gitDaksh"
+        github: "https://github.com/GitDaksh/GitFlow"
       }
     },
     {
@@ -33,25 +33,25 @@ export const ProjectsSection = () => {
       description: "A full-stack video conferencing web app built with Next.js, Tailwind CSS, and Material-UI, utilizing Stream API for real-time communication and Clerk for secure user authentication, providing a seamless and scalable solution for virtual meetings and collaboration.",
       technologies: ["Next.js", "Tailwind CSS", "Material UI", "Stream API", "Clerk"],
       links: {
-        github: "https://github.com/gitDaksh"
+        github: "https://github.com/gitDaksh/visualvibe"
       }
     },
     {
-      title: "VividlyAI",
+      title: "Fixster",
       year: "2025",
-      description: "An AI SaaS application for image generation and enhancement, built with Next.js, Tailwind CSS, and integrated and OpenAI models for real-time upscaling, style transfer, and AI-driven image manipulation.",
-      technologies: ["Next.js", "Tailwind CSS", "OpenAI"],
+      description: "An AI-powered code debugging and development assistant built with Next.js and TypeScript. It features Web-based AI debugging, a Monaco code editor, multi-language support, and real-time AI assistance using Google Gemini.,
+      technologies: ["Next.js", "Tailwind CSS", "Gemini API", "monaco-editor"],
       links: {
-        github: "https://github.com/gitDaksh"
+        github: "https://github.com/gitDaksh/fixster"
       }
     },
     {
-      title: "Portfolio",
-      year: "2024",
-      description: "A modern, dynamic portfolio built with Next.js, Tailwind CSS, and TypeScript, showcasing a sleek, responsive design with interactive elements powered by Three.js for 3D visuals. The site also integrates technologies like Vercel for deployment, and emailJS for seamless form handling, offering a user-friendly and performance-optimized experience.",
-      technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Three.js", "Vercel", "EmailJS"],
+      title: "InterviewX",
+      year: "2025",
+      description: "An AI-powered interview web app built with Next.js, Tailwind CSS, and ShadCN, featuring real-time voice interactions via Vapi.ai.",
+      technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Vapi.ai"],
       links: {
-        github: "https://github.com/gitDaksh"
+        github: "https://github.com/gitDaksh/interviewx"
       }
     }
   ];
