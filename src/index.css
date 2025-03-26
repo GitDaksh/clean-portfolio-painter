@@ -136,16 +136,72 @@ a, button {
   @apply transition-all duration-200;
 }
 
-/* Card hover effects */
+/* Enhanced Card hover effects */
 .hover-card {
-  @apply transition-all duration-300;
+  @apply transition-all duration-300 border border-border/50;
 }
 
 .hover-card:hover {
-  @apply shadow-md transform translate-y-[-5px];
+  @apply shadow-lg transform -translate-y-1 border-primary/30 bg-secondary/40;
+}
+
+/* Focus states */
+a:focus, button:focus {
+  @apply outline-none ring-2 ring-primary/40 ring-offset-2 ring-offset-background;
 }
 
 /* Section spacing */
 section {
   @apply scroll-mt-24;
+}
+
+/* Improved animations */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
 }

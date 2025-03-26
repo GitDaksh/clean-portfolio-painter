@@ -29,27 +29,38 @@ const Index = () => {
       });
     });
     
-    // Enhanced reveal animations on scroll
+    // Enhanced reveal animations on scroll with better performance
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in');
-            // Use HTMLElement instead of Element to access style property
+            // Check if target is HTMLElement before accessing style
             if (entry.target instanceof HTMLElement) {
+              // Apply different animation classes based on data attribute
+              const animationType = entry.target.dataset.animation || 'fade-up';
+              entry.target.classList.add(`animate-${animationType}`);
               entry.target.style.opacity = '1';
+              observer.unobserve(entry.target);
             }
-            observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
     );
     
-    document.querySelectorAll('.section-heading, .animate-on-scroll').forEach((el) => {
+    // Apply animations to sections and elements with animation classes
+    document.querySelectorAll('.section-heading, .animate-on-scroll').forEach((el, index) => {
       if (el instanceof HTMLElement) {
+        // Set initial styles
         el.style.opacity = '0';
-        el.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+        
+        // Set animation type as data attribute (could be customized per element)
+        el.dataset.animation = 'fade-up';
+        
+        // Add staggered delay based on index
+        el.style.animationDelay = `${0.1 + (index * 0.1)}s`;
+        
+        // Observe element
         observer.observe(el);
       }
     });

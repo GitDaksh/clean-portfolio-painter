@@ -9,8 +9,8 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <h2 className="text-xl font-playfair font-semibold">
-              Daksh<span className="text-primary">.</span>
+            <h2 className="text-xl font-playfair font-semibold group">
+              Daksh<span className="text-primary group-hover:text-foreground transition-colors">.</span>
             </h2>
             <p className="text-sm text-muted-foreground mt-1">
               Full-stack Developer
@@ -22,28 +22,28 @@ export const Footer = () => {
               href="mailto:daksh.java.util@gmail.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary/10 transition-colors"
+              className="w-10 h-10 rounded-md bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
               aria-label="Email"
             >
-              <Mail size={18} className="text-foreground" />
+              <Mail size={18} />
             </a>
             <a 
               href="https://github.com/gitDaksh" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary/10 transition-colors"
+              className="w-10 h-10 rounded-md bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
               aria-label="GitHub"
             >
-              <Github size={18} className="text-foreground" />
+              <Github size={18} />
             </a>
             <a 
               href="https://linkedin.com/in/gitDaksh" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary/10 transition-colors"
+              className="w-10 h-10 rounded-md bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
               aria-label="LinkedIn"
             >
-              <Linkedin size={18} className="text-foreground" />
+              <Linkedin size={18} />
             </a>
           </div>
           
@@ -52,8 +52,10 @@ export const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>Designed and built with precision and care</p>
+        <div className="mt-8 pt-8 border-t border-border text-center">
+          <p className="text-sm text-muted-foreground">
+            Designed and built with precision and care, <a href="#hero" className="text-primary hover:text-primary/80 hover:underline">back to top</a>
+          </p>
         </div>
       </div>
     </footer>
