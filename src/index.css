@@ -115,7 +115,7 @@
   }
   
   .skills-chip {
-    @apply px-3 py-1 rounded-full text-sm bg-secondary text-secondary-foreground transition-all hover:bg-primary/10 hover:text-primary cursor-default;
+    @apply px-3 py-1 rounded-full text-sm bg-secondary text-secondary-foreground transition-all hover:bg-primary/10 hover:text-primary cursor-default border border-transparent hover:border-primary/20 shadow-sm;
   }
   
   .animate-on-scroll {
@@ -138,11 +138,7 @@ a, button {
 
 /* Enhanced Card hover effects */
 .hover-card {
-  @apply transition-all duration-300 border border-border/50;
-}
-
-.hover-card:hover {
-  @apply shadow-lg transform -translate-y-1 border-primary/30 bg-secondary/40;
+  @apply transition-all duration-300 border border-border/50 hover:shadow-lg hover:-translate-y-1 hover:border-primary/30 hover:bg-secondary/40;
 }
 
 /* Focus states */

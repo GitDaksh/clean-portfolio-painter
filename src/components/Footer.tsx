@@ -5,7 +5,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="py-12 px-6 lg:px-12 bg-white border-t border-border dark:bg-background">
+    <footer className="py-12 px-6 lg:px-12 bg-gradient-to-t from-secondary/50 to-white border-t border-border dark:bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
@@ -22,7 +22,7 @@ export const Footer = () => {
               href="mailto:daksh.java.util@gmail.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-md bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
+              className="w-10 h-10 rounded-md bg-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all shadow-sm"
               aria-label="Email"
             >
               <Mail size={18} />
@@ -31,7 +31,7 @@ export const Footer = () => {
               href="https://github.com/gitDaksh" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-md bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
+              className="w-10 h-10 rounded-md bg-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all shadow-sm"
               aria-label="GitHub"
             >
               <Github size={18} />
@@ -40,7 +40,7 @@ export const Footer = () => {
               href="https://linkedin.com/in/gitDaksh" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-md bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
+              className="w-10 h-10 rounded-md bg-white flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all shadow-sm"
               aria-label="LinkedIn"
             >
               <Linkedin size={18} />

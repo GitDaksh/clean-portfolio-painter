@@ -55,7 +55,7 @@ const Index = () => {
         el.style.opacity = '0';
         
         // Set animation type as data attribute (could be customized per element)
-        el.dataset.animation = 'fade-up';
+        el.dataset.animation = index % 2 === 0 ? 'fade-up' : 'scale-in';
         
         // Add staggered delay based on index
         el.style.animationDelay = `${0.1 + (index * 0.1)}s`;
@@ -71,7 +71,7 @@ const Index = () => {
   }, []);
   
   return (
-    <div className="min-h-screen w-full bg-background text-foreground">
+    <div className="min-h-screen w-full bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <main>
         <HeroSection />
