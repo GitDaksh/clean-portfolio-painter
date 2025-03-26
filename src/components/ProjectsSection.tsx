@@ -39,7 +39,7 @@ export const ProjectsSection = () => {
     {
       title: "Fixster",
       year: "2025",
-      description: "An AI-powered code debugging and development assistant built with Next.js and TypeScript. It features Web-based AI debugging, a Monaco code editor, multi-language support, and real-time AI assistance using Google Gemini.,
+      description: "An AI-powered code debugging and development assistant built with Next.js and TypeScript. It features Web-based AI debugging, a Monaco code editor, multi-language support, and real-time AI assistance using Google Gemini.",
       technologies: ["Next.js", "Tailwind CSS", "Gemini API", "monaco-editor"],
       links: {
         github: "https://github.com/gitDaksh/fixster"
