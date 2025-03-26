@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 
 const Index = () => {
   useEffect(() => {
-    // Smooth scroll for anchor links
+    // Improved smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -29,7 +29,7 @@ const Index = () => {
       });
     });
     
-    // Reveal animations on scroll
+    // Enhanced reveal animations on scroll
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -43,11 +43,15 @@ const Index = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     );
     
-    document.querySelectorAll('.section-heading').forEach((el) => {
-      observer.observe(el);
+    document.querySelectorAll('.section-heading, .animate-on-scroll').forEach((el) => {
+      if (el instanceof HTMLElement) {
+        el.style.opacity = '0';
+        el.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+        observer.observe(el);
+      }
     });
     
     return () => {

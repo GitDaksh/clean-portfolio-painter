@@ -111,11 +111,15 @@
   }
   
   .section-heading {
-    @apply text-2xl sm:text-3xl font-playfair font-semibold mb-6 text-foreground/90;
+    @apply text-2xl sm:text-3xl font-playfair font-semibold mb-6 text-foreground/90 relative after:absolute after:w-16 after:h-[3px] after:bg-primary after:bottom-[-12px] after:left-0;
   }
   
   .skills-chip {
     @apply px-3 py-1 rounded-full text-sm bg-secondary text-secondary-foreground transition-all hover:bg-primary/10 hover:text-primary cursor-default;
+  }
+  
+  .animate-on-scroll {
+    @apply opacity-0 transition-opacity duration-500 ease-out;
   }
 }
 
@@ -125,4 +129,23 @@
 
 .font-inter {
   font-family: 'Inter', sans-serif;
+}
+
+/* Smooth transitions */
+a, button {
+  @apply transition-all duration-200;
+}
+
+/* Card hover effects */
+.hover-card {
+  @apply transition-all duration-300;
+}
+
+.hover-card:hover {
+  @apply shadow-md transform translate-y-[-5px];
+}
+
+/* Section spacing */
+section {
+  @apply scroll-mt-24;
 }

@@ -21,12 +21,16 @@ export const Navbar = () => {
   }, []);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  
+  const handleNavLinkClick = () => {
+    if (isMenuOpen) setIsMenuOpen(false);
+  };
 
   return (
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 lg:px-12",
-        isScrolled ? "py-4 bg-background/80 backdrop-blur-md shadow-sm" : "py-6"
+        isScrolled ? "py-3 bg-background/90 backdrop-blur-md shadow-sm" : "py-5"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -49,6 +53,7 @@ export const Navbar = () => {
           <a href="#experience" className="link-underline">Experience</a>
           <a href="#projects" className="link-underline">Projects</a>
           <a href="#achievements" className="link-underline">Achievements</a>
+          <a href="#contact" className="link-underline">Contact</a>
           <div className="flex items-center space-x-4 ml-4">
             <a 
               href="mailto:daksh.java.util@gmail.com" 
@@ -89,10 +94,11 @@ export const Navbar = () => {
         )}
       >
         <nav className="flex flex-col items-center space-y-8 p-8">
-          <a href="#about" className="text-xl" onClick={toggleMenu}>About</a>
-          <a href="#experience" className="text-xl" onClick={toggleMenu}>Experience</a>
-          <a href="#projects" className="text-xl" onClick={toggleMenu}>Projects</a>
-          <a href="#achievements" className="text-xl" onClick={toggleMenu}>Achievements</a>
+          <a href="#about" className="text-xl" onClick={handleNavLinkClick}>About</a>
+          <a href="#experience" className="text-xl" onClick={handleNavLinkClick}>Experience</a>
+          <a href="#projects" className="text-xl" onClick={handleNavLinkClick}>Projects</a>
+          <a href="#achievements" className="text-xl" onClick={handleNavLinkClick}>Achievements</a>
+          <a href="#contact" className="text-xl" onClick={handleNavLinkClick}>Contact</a>
           <div className="flex items-center space-x-8 mt-8">
             <a 
               href="mailto:daksh.java.util@gmail.com" 
