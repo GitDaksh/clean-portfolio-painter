@@ -1,0 +1,114 @@
+
+import { useState } from 'react';
+import { Code, Database, Layout } from 'lucide-react';
+
+export const AboutSection = () => {
+  const [activeTab, setActiveTab] = useState<'languages' | 'technologies'>('languages');
+
+  const languages = [
+    "TypeScript", "Java", "JavaScript", "C++", "Python", "SQL"
+  ];
+
+  const technologies = [
+    "Next.js", "React.js", "TailwindCSS", "Express.js", "Three.js", "MySQL", 
+    "PostgreSQL", "MongoDB", "Docker", "AWS", "Git", "RestAPIs", 
+    "WebSockets", "Stripe", "Hoppscotch"
+  ];
+
+  return (
+    <section 
+      id="about" 
+      className="py-20 px-6 lg:px-12 bg-secondary/30"
+    >
+      <div className="max-w-7xl mx-auto">
+        <h2 className="section-heading animate-slide-in opacity-0" style={{ animationFillMode: 'forwards' }}>
+          About Me
+        </h2>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-6 animate-slide-in opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+            <p className="text-lg leading-relaxed">
+              I'm a passionate full-stack developer with expertise in building modern web applications. 
+              Currently pursuing my B.E. in Computer Science and Engineering with a specialization in AI and ML at 
+              Chandigarh University, I bring a strong foundation in software development complemented by practical 
+              experience through internships at Cloud Counselage Pvt. Ltd. and Zidio Development.
+            </p>
+            
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="p-4 rounded-lg bg-white shadow-sm border border-border flex flex-col items-center text-center">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                  <Layout size={24} className="text-primary" />
+                </div>
+                <h3 className="font-medium mb-2">Frontend Development</h3>
+                <p className="text-sm text-muted-foreground">Creating beautiful, responsive interfaces with React and Next.js</p>
+              </div>
+              
+              <div className="p-4 rounded-lg bg-white shadow-sm border border-border flex flex-col items-center text-center">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                  <Code size={24} className="text-primary" />
+                </div>
+                <h3 className="font-medium mb-2">Backend Development</h3>
+                <p className="text-sm text-muted-foreground">Building robust APIs and services with Express.js and Node.js</p>
+              </div>
+              
+              <div className="p-4 rounded-lg bg-white shadow-sm border border-border flex flex-col items-center text-center">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                  <Database size={24} className="text-primary" />
+                </div>
+                <h3 className="font-medium mb-2">Database Management</h3>
+                <p className="text-sm text-muted-foreground">Designing and optimizing database systems with MongoDB and SQL</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="lg:col-span-6 animate-slide-in-right opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+            <div className="bg-white rounded-lg shadow-sm border border-border p-6">
+              <div className="flex space-x-2 mb-6">
+                <button 
+                  className={`px-4 py-2 rounded-md transition-colors ${activeTab === 'languages' ? 'bg-primary text-primary-foreground' : 'bg-secondary text-secondary-foreground'}`}
+                  onClick={() => setActiveTab('languages')}
+                >
+                  Languages
+                </button>
+                <button 
+                  className={`px-4 py-2 rounded-md transition-colors ${activeTab === 'technologies' ? 'bg-primary text-primary-foreground' : 'bg-secondary text-secondary-foreground'}`}
+                  onClick={() => setActiveTab('technologies')}
+                >
+                  Technologies & Tools
+                </button>
+              </div>
+              
+              <div className="min-h-[240px]">
+                {activeTab === 'languages' ? (
+                  <div className="flex flex-wrap gap-2">
+                    {languages.map((language, index) => (
+                      <span 
+                        key={language} 
+                        className="skills-chip animate-fade-in" 
+                        style={{ animationDelay: `${0.1 * index}s`, animationFillMode: 'forwards', opacity: 0 }}
+                      >
+                        {language}
+                      </span>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="flex flex-wrap gap-2">
+                    {technologies.map((tech, index) => (
+                      <span 
+                        key={tech} 
+                        className="skills-chip animate-fade-in" 
+                        style={{ animationDelay: `${0.05 * index}s`, animationFillMode: 'forwards', opacity: 0 }}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
